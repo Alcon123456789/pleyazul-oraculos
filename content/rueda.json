@@ -8,5 +8,75 @@
     "afirmacion": "Agradezco la abundancia que me rodea y comparto mis bendiciones con generosidad.",
     "elemento": "Tierra",
     "direccion": "Norte"
+  },
+  {
+    "animal": "Águila",
+    "arquetipo": "El Visionario",
+    "luz": "Visión clara, perspectiva elevada, conexión espiritual, libertad, poder",
+    "sombra": "Orgullo excesivo, desconexión terrenal, frialdad emocional, arrogancia",
+    "medicina": "Te invita a elevarte por encima de las limitaciones y ver la verdad desde una perspectiva superior.",
+    "afirmacion": "Veo con claridad mi camino y confío en la sabiduría que viene desde lo alto.",
+    "elemento": "Aire",
+    "direccion": "Este"
+  },
+  {
+    "animal": "Oso",
+    "arquetipo": "El Sanador",
+    "luz": "Sanación, introspección, fuerza interior, protección maternal, hibernación sagrada",
+    "sombra": "Aislamiento excesivo, agresividad, torpeza social, hibernación escapista",
+    "medicina": "Enseña la importancia del tiempo de retiro interior para encontrar la sanación y renovación.",
+    "afirmacion": "Me permito momentos de soledad para sanar y renovar mi espíritu.",
+    "elemento": "Tierra",
+    "direccion": "Oeste"
+  },
+  {
+    "animal": "Lobo",
+    "arquetipo": "El Maestro",
+    "luz": "Lealtad, enseñanza, liderazgo de la manada, comunicación, instinto",
+    "sombra": "Conformidad ciega, agresividad territorial, aislamiento del grupo",
+    "medicina": "Te enseña sobre la importancia de la comunidad y el equilibrio entre liderazgo y cooperación.",
+    "afirmacion": "Lidero con sabiduría y permanezco leal a mi manada espiritual.",
+    "elemento": "Tierra",
+    "direccion": "Norte"
+  },
+  {
+    "animal": "Cuervo",
+    "arquetipo": "El Mensajero",
+    "luz": "Magia, transformación, mensajes del espíritu, inteligencia, adaptabilidad",
+    "sombra": "Engaño, manipulación, mensajes confusos, travesuras destructivas",
+    "medicina": "Trae mensajes importantes del mundo espiritual y enseña sobre los misterios de la vida y la muerte.",
+    "afirmacion": "Estoy abierto a recibir mensajes del universo y confío en mi sabiduría interior.",
+    "elemento": "Aire",
+    "direccion": "Este"
+  },
+  {
+    "animal": "Serpiente",
+    "arquetipo": "La Transmutadora",
+    "luz": "Transformación, sanación, renovación, conocimiento oculto, kundalini",
+    "sombra": "Traición, veneno emocional, manipulación, tentación destructiva",
+    "medicina": "Enseña el poder de la transformación completa y la sanación a través del cambio.",
+    "afirmacion": "Abrazo los cambios en mi vida como oportunidades de crecimiento y renovación.",
+    "elemento": "Fuego",
+    "direccion": "Sur"
+  },
+  {
+    "animal": "Venado",
+    "arquetipo": "El Gentil",
+    "luz": "Gentileza, gracia, sensibilidad, amor incondicional, compasión",
+    "sombra": "Victimización, excesiva sensibilidad, falta de límites, sumisión",
+    "medicina": "Te enseña el poder de la gentileza y cómo la compasión puede ser la mayor fortaleza.",
+    "afirmacion": "Mi gentileza es mi fortaleza y mi compasión transforma el mundo que me rodea.",
+    "elemento": "Tierra",
+    "direccion": "Norte"
+  },
+  {
+    "animal": "Puma",
+    "arquetipo": "El Líder",
+    "luz": "Liderazgo natural, valentía, poder personal, independencia, agilidad",
+    "sombra": "Dominación, arrogancia, aislamiento por poder, agresividad",
+    "medicina": "Enseña sobre el verdadero liderazgo que viene del poder personal equilibrado.",
+    "afirmacion": "Lidero con valentía y uso mi poder personal para el bien de todos.",
+    "elemento": "Fuego",
+    "direccion": "Sur"
   }
 ]
