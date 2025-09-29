@@ -324,6 +324,52 @@ export async function POST(request, { params }) {
         
         return NextResponse.json(result, { headers: corsHeaders });
 
+      // Demo reading generation (test mode)
+      case 'demo/reading':
+        const { email: demoEmail, spread_id: demoSpreadId } = body;
+        
+        if (!demoEmail || !demoSpreadId) {
+          return NextResponse.json(
+            { error: 'Email and spread_id are required' },
+            { status: 400, headers: corsHeaders }
+          );
+        }
+        
+        // Validate spread exists
+        const demoSpreads = contentService.loadContent('spreads');
+        if (!demoSpreads[demoSpreadId]) {
+          return NextResponse.json(
+            { error: 'Invalid spread_id' },
+            { status: 400, headers: corsHeaders }
+          );
+        }
+        
+        const demoOrderId = `demo_${uuidv4()}`;
+        
+        // Generate demo reading directly
+        const demoReading = contentService.generateReading(demoOrderId, demoEmail, demoSpreadId);
+        
+        const demoReadingData = {
+          _id: uuidv4(),
+          order_id: demoOrderId,
+          result_json: demoReading,
+          created_at: new Date(),
+          is_demo: true,
+          demo_email: demoEmail
+        };
+        
+        // Save demo reading
+        const demoReadingsCol = await getCollection('readings');
+        await demoReadingsCol.insertOne(demoReadingData);
+        
+        return NextResponse.json({
+          success: true,
+          demo: true,
+          order_id: demoOrderId,
+          reading: demoReadingData,
+          redirect_url: `/lectura/${demoOrderId}?demo=true`
+        }, { headers: corsHeaders });
+
       // Admin content updates
       case 'admin/content':
         const { type, content } = body;
