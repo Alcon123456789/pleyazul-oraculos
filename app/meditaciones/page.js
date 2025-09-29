@@ -86,6 +86,16 @@ export default function MeditacionesPage() {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
+              {meditacion.image && (
+                <div className="mb-4">
+                  <img 
+                    src={meditacion.image} 
+                    alt={meditacion.titulo}
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                </div>
+              )}
+              
               {meditacion.texto && (
                 <div className="bg-slate-50 p-4 rounded-lg">
                   <p className="text-sm text-slate-600 leading-relaxed">
