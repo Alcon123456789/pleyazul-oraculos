@@ -391,6 +391,33 @@ export default function AdminPage() {
             </CardContent>
           </Card>
         </TabsContent>
+
+        {/* Guide Tab */}
+        <TabsContent value="guide">
+          <Card>
+            <CardHeader>
+              <CardTitle>Guía de Contenido</CardTitle>
+              <CardDescription>
+                Aprende a gestionar el contenido de los oráculos
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="text-center py-8">
+              <BookOpen className="w-16 h-16 mx-auto mb-4 text-slate-300" />
+              <h3 className="text-lg font-semibold text-slate-800 mb-2">
+                Guía Completa de Contenido
+              </h3>
+              <p className="text-slate-600 mb-4">
+                Accede a la guía completa para gestionar cartas de tarot, hexagramas del I Ching, 
+                animales de la rueda medicinal y meditaciones.
+              </p>
+              <Button asChild>
+                <Link href="/admin/content-guide">
+                  Ver Guía Completa
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+        </TabsContent>
       </Tabs>
     </div>
   );
