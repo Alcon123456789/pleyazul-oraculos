@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#8B4513" />
-        <link rel="apple-touch-icon" href="/icon-192.png" />
+        <link rel="apple-touch-icon" href="/icon-192.svg" />
       </head>
       <body className={`${inter.className} antialiased bg-gradient-to-br from-amber-50 to-orange-100 min-h-screen`}>
         <div className="container mx-auto px-4 py-6">
