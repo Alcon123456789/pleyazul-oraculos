@@ -11,7 +11,8 @@
       "medicina": {"type": "string"},
       "afirmacion": {"type": "string"},
       "elemento": {"type": "string"},
-      "direccion": {"type": "string"}
+      "direccion": {"type": "string"},
+      "image": {"type": "string"}
     }
   }
 }
