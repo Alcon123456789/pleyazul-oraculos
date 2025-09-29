@@ -246,6 +246,16 @@ export default function LecturaPage({ params }) {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
+                  {animal.image && (
+                    <div className="flex justify-center mb-4">
+                      <img 
+                        src={animal.image} 
+                        alt={animal.animal}
+                        className="w-32 h-32 object-cover rounded-full shadow-md"
+                      />
+                    </div>
+                  )}
+                  
                   <div>
                     <h4 className="font-medium text-green-700">Luz:</h4>
                     <p className="text-slate-600">{animal.luz}</p>
