@@ -10,7 +10,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { 
   Shield, Settings, CheckCircle, XCircle, AlertTriangle, 
   Eye, Copy, ExternalLink, Database, MessageCircle,
-  CreditCard, ArrowLeft
+  CreditCard, ArrowLeft, BookOpen
 } from 'lucide-react';
 import Link from 'next/link';
 import { toast } from 'sonner';
