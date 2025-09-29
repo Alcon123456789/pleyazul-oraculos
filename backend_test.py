@@ -568,8 +568,8 @@ class PleyazulBackendTester:
             return False
     
     def run_all_tests(self):
-        """Run complete test suite"""
-        print("🔮 Starting Pleyazul Oráculos Backend Test Suite")
+        """Run complete test suite including enhanced features"""
+        print("🔮 Starting Enhanced Pleyazul Oráculos Backend Test Suite")
         print("=" * 60)
         
         # Test 1: API Status
@@ -580,29 +580,37 @@ class PleyazulBackendTester:
         print("\n2. Testing Content Loading Endpoints...")
         content_status = self.test_content_endpoints()
         
-        # Test 3: Checkout Flow
-        print("\n3. Testing Order Creation and Checkout Flow...")
+        # Test 3: Media Support (NEW)
+        print("\n3. Testing Media Support (Images & Audio)...")
+        media_status = self.test_media_support()
+        
+        # Test 4: Demo Functionality (NEW)
+        print("\n4. Testing Demo Reading Functionality...")
+        demo_status = self.test_demo_functionality()
+        
+        # Test 5: Checkout Flow
+        print("\n5. Testing Order Creation and Checkout Flow...")
         order_id = self.test_checkout_flow()
         
-        # Test 4: Reading Generation
-        print("\n4. Testing Reading Generation...")
+        # Test 6: Reading Generation with Images
+        print("\n6. Testing Reading Generation with Media Support...")
         reading_status = self.test_reading_generation(order_id if order_id else None)
         
-        # Test 5: Database Operations
-        print("\n5. Testing Database Operations...")
+        # Test 7: Database Operations
+        print("\n7. Testing Database Operations...")
         db_status = self.test_database_operations(order_id if order_id else None)
         
-        # Test 6: Error Handling
-        print("\n6. Testing Error Handling...")
+        # Test 8: Error Handling
+        print("\n8. Testing Error Handling...")
         error_status = self.test_error_handling()
         
-        # Test 7: Admin Endpoints
-        print("\n7. Testing Admin Endpoints...")
+        # Test 9: Admin Endpoints
+        print("\n9. Testing Admin Endpoints...")
         admin_status = self.test_admin_endpoints()
         
         # Summary
         print("\n" + "=" * 60)
-        print("🔮 TEST SUMMARY")
+        print("🔮 ENHANCED TEST SUMMARY")
         print("=" * 60)
         
         total_tests = len(self.test_results)
@@ -621,11 +629,20 @@ class PleyazulBackendTester:
                 if not result['success']:
                     print(f"  - {result['test']}: {result['message']}")
         
+        # Enhanced features status
+        enhanced_features = [demo_status, media_status]
+        print(f"\n🆕 ENHANCED FEATURES: {'WORKING' if all(enhanced_features) else 'ISSUES DETECTED'}")
+        
         # Overall status
         critical_systems = [api_status, content_status, bool(order_id), reading_status]
         if all(critical_systems):
             print("\n🎉 CORE FUNCTIONALITY: WORKING")
-            return True
+            if all(enhanced_features):
+                print("✨ ALL ENHANCED FEATURES: WORKING")
+                return True
+            else:
+                print("⚠️  SOME ENHANCED FEATURES: NEED ATTENTION")
+                return True  # Core works, enhanced features may have issues
         else:
             print("\n⚠️  CORE FUNCTIONALITY: ISSUES DETECTED")
             return False
