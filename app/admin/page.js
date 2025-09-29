@@ -124,11 +124,12 @@ export default function AdminPage() {
       </div>
 
       <Tabs defaultValue="setup" className="space-y-6">
-        <TabsList className="grid w-full grid-cols-4">
+        <TabsList className="grid w-full grid-cols-5">
           <TabsTrigger value="setup">Estado del Sistema</TabsTrigger>
           <TabsTrigger value="content">Contenido</TabsTrigger>
           <TabsTrigger value="orders">Pedidos</TabsTrigger>
           <TabsTrigger value="settings">Configuración</TabsTrigger>
+          <TabsTrigger value="guide">Guía</TabsTrigger>
         </TabsList>
 
         {/* Setup Status Tab */}
