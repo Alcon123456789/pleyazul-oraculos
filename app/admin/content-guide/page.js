@@ -6,7 +6,8 @@ import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { 
   ArrowLeft, BookOpen, Image, Music, FileText, 
-  Code, FolderOpen, Upload, Eye, AlertCircle
+  Code, FolderOpen, Upload, Eye, AlertCircle, 
+  Stars, Compass
 } from 'lucide-react';
 import Link from 'next/link';
 
