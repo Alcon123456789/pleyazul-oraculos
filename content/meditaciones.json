@@ -5,6 +5,16 @@
     "descripcion": "Una meditación guiada para conectar con tu respiración y encontrar calma interior.",
     "duracion": "10 minutos",
     "texto": "Siéntate cómodamente y cierra los ojos. Comienza a observar tu respiración natural, sin forzarla. Inhala profundamente por la nariz, siente cómo el aire llena tus pulmones. Exhala lentamente por la boca, liberando toda la tensión. Continúa respirando conscientemente, permitiendo que cada respiración te lleve más profundo hacia tu centro interior.",
-    "audio_url": ""
+    "audio_url": "/audio/placeholder-meditation.mp3",
+    "image": "/img/meditation-breathe.svg"
+  },
+  {
+    "slug": "conexion-tierra",
+    "titulo": "Conexión con la Tierra",
+    "descripcion": "Meditación para enraizarte y conectar con la energía sanadora de la Madre Tierra.",
+    "duracion": "15 minutos",
+    "texto": "Busca un lugar cómodo donde puedas sentarte en contacto con la tierra, ya sea al aire libre o visualizando esta conexión. Cierra los ojos y siente como tus raíces se extienden profundamente hacia el centro de la Tierra. Con cada respiración, absorbe la energía estable y nutritiva que asciende desde las profundidades, llenando todo tu ser con fortaleza y serenidad.",
+    "audio_url": "",
+    "image": "/img/meditation-earth.svg"
   }
 ]
