@@ -1,0 +1,25 @@
+{
+  "name": "Pleyazul Oráculos",
+  "short_name": "Pleyazul",
+  "description": "Consulta oráculos ancestrales: Tarot, I Ching y Rueda Medicinal",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#8B4513",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["lifestyle", "entertainment"],
+  "lang": "es",
+  "scope": "/"
+}
