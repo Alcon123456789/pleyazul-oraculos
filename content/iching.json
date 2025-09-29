@@ -14,5 +14,69 @@
       "5": "Dragón volante en el cielo. Conviene ver al gran hombre.",
       "6": "Dragón altivo tendrá motivo de arrepentimiento."
     }
+  },
+  {
+    "hex": 2,
+    "nombre": "Lo Receptivo",
+    "palabras_clave": ["receptividad", "tierra", "nutrición", "yin puro", "devoción"],
+    "juicio": "Lo Receptivo obra sublime éxito. Es propicia la perseverancia de una yegua.",
+    "imagen": "El estado de la tierra es receptivo entregado. Así el hombre noble de amplia naturaleza lleva el mundo exterior.",
+    "consejo": "La receptividad y la paciencia te llevarán al éxito. Confía en el proceso natural.",
+    "lineas": {
+      "1": "Cuando se pisa escarcha, se acerca el hielo sólido.",
+      "2": "Derecho, cuadrado, grande. Sin propósito, sin embargo, todo sale bien.",
+      "3": "Líneas ocultas. Uno es capaz de permanecer perseverante.",
+      "4": "Saco atado. Ninguna falta, ningún elogio.",
+      "5": "Ropa interior amarilla trae suprema buena fortuna.",
+      "6": "Dragones luchan en la pradera. Su sangre es negra y amarilla."
+    }
+  },
+  {
+    "hex": 3,
+    "nombre": "La Dificultad Inicial",
+    "palabras_clave": ["comienzo", "dificultad", "crecimiento", "germinación", "esfuerzo"],
+    "juicio": "La Dificultad Inicial obra sublime éxito, propiciando por la perseverancia.",
+    "imagen": "Nubes y trueno: la imagen de la Dificultad Inicial. Así el hombre noble desenreda la madeja.",
+    "consejo": "Los nuevos comienzos requieren paciencia y perseverancia. No te desalientes por las dificultades iniciales.",
+    "lineas": {
+      "1": "Vacilación y obstáculo. Es propicio permanecer perseverante.",
+      "2": "Las dificultades se acumulan. Caballo y carro se separan.",
+      "3": "Quien caza ciervos sin guía forestal se extravía en el bosque.",
+      "4": "Caballo y carro se separan. Busca la unión.",
+      "5": "Dificultades en bendecir. Pequeña perseverancia trae buena fortuna.",
+      "6": "Caballo y carro se separan. Lágrimas de sangre fluyen."
+    }
+  },
+  {
+    "hex": 4,
+    "nombre": "La Necedad Juvenil",
+    "palabras_clave": ["inexperiencia", "aprendizaje", "educación", "humildad", "crecimiento"],
+    "juicio": "La Necedad Juvenil tiene éxito. No soy yo quien busca al joven necio; el joven necio me busca a mí.",
+    "imagen": "En la base de la montaña brota una fuente: la imagen de la Juventud.",
+    "consejo": "La humildad y el deseo genuino de aprender son las llaves del crecimiento. Busca maestros sabios.",
+    "lineas": {
+      "1": "Para desarrollar al necio es propicio aplicar disciplina.",
+      "2": "Soportar a los necios con benevolencia trae buena fortuna.",
+      "3": "No tomes una doncella que al ver un hombre de bronce pierde su autocontrol.",
+      "4": "Necedad entorpecida trae humillación.",
+      "5": "Necedad infantil trae buena fortuna.",
+      "6": "Al castigar la necedad, no es propicio cometer transgresiones."
+    }
+  },
+  {
+    "hex": 5,
+    "nombre": "La Espera",
+    "palabras_clave": ["paciencia", "espera", "confianza", "tiempo", "resistencia"],
+    "juicio": "La Espera. Si eres sincero, tienes luz y éxito. La perseverancia trae buena fortuna.",
+    "imagen": "Las nubes suben al cielo: la imagen de la Espera.",
+    "consejo": "La paciencia es tu mayor virtud ahora. El momento adecuado llegará por sí solo.",
+    "lineas": {
+      "1": "Espera en la pradera. Es propicio perseverar en lo duradero.",
+      "2": "Espera en la arena. Hay algo de murmuración, pero al final buena fortuna.",
+      "3": "Espera en el barro ocasiona la llegada del enemigo.",
+      "4": "Espera en sangre. Sal del hoyo.",
+      "5": "Espera en vino y comida. La perseverancia trae buena fortuna.",
+      "6": "Uno cae en el hoyo. Llegan tres huéspedes no invitados."
+    }
   }
 ]
