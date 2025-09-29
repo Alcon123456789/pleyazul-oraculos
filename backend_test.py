@@ -201,8 +201,148 @@ class PleyazulBackendTester:
             self.log_test("Checkout Flow", False, f"Error: {str(e)}")
             return False
     
+    def test_demo_functionality(self):
+        """Test new demo reading functionality"""
+        try:
+            # Get spreads to test different oracle types
+            spreads_response = self.session.get(f"{API_BASE}/content/spreads")
+            if spreads_response.status_code != 200:
+                self.log_test("Demo Functionality", False, "Cannot get spreads for demo testing")
+                return False
+            
+            spreads = spreads_response.json()
+            if not spreads:
+                self.log_test("Demo Functionality", False, "No spreads available for demo testing")
+                return False
+            
+            # Test demo reading for different spread types
+            demo_results = []
+            for spread_id, spread_config in spreads.items():
+                try:
+                    demo_data = {
+                        "email": "demo@pleyazul.com",
+                        "spread_id": spread_id
+                    }
+                    
+                    response = self.session.post(f"{API_BASE}/demo/reading", json=demo_data)
+                    
+                    if response.status_code == 200:
+                        data = response.json()
+                        
+                        if data.get('success') and data.get('demo'):
+                            # Verify demo reading structure
+                            reading = data.get('reading', {})
+                            if reading.get('is_demo') and reading.get('order_id', '').startswith('demo_'):
+                                oracle_type = spread_config.get('oraculo')
+                                result_json = reading.get('result_json', {})
+                                
+                                # Verify reading content based on oracle type
+                                if oracle_type == 'tarot' and 'cards' in result_json:
+                                    demo_results.append(f"Tarot demo: {len(result_json['cards'])} cards")
+                                elif oracle_type == 'iching' and 'hexagram' in result_json:
+                                    demo_results.append(f"I Ching demo: {result_json['hexagram'].get('nombre', 'Unknown')}")
+                                elif oracle_type == 'rueda' and 'animals' in result_json:
+                                    demo_results.append(f"Rueda demo: {len(result_json['animals'])} animals")
+                                else:
+                                    self.log_test("Demo Functionality", False, f"Invalid demo reading structure for {spread_id}")
+                                    return False
+                            else:
+                                self.log_test("Demo Functionality", False, f"Demo reading not properly marked for {spread_id}")
+                                return False
+                        else:
+                            self.log_test("Demo Functionality", False, f"Demo generation failed for {spread_id}", data)
+                            return False
+                    else:
+                        self.log_test("Demo Functionality", False, f"HTTP {response.status_code} for {spread_id}", response.text)
+                        return False
+                        
+                except Exception as e:
+                    self.log_test("Demo Functionality", False, f"Error testing {spread_id}: {str(e)}")
+                    return False
+            
+            self.log_test("Demo Functionality", True, f"All demo readings generated successfully: {', '.join(demo_results)}")
+            return True
+            
+        except Exception as e:
+            self.log_test("Demo Functionality", False, f"Error: {str(e)}")
+            return False
+    
+    def test_media_support(self):
+        """Test media support in content (images and audio)"""
+        try:
+            # Test tarot cards have image fields
+            tarot_response = self.session.get(f"{API_BASE}/content/tarot")
+            if tarot_response.status_code == 200:
+                tarot_data = tarot_response.json()
+                if isinstance(tarot_data, list) and len(tarot_data) > 0:
+                    # Check if cards have image field
+                    cards_with_images = [card for card in tarot_data if 'image' in card]
+                    if len(cards_with_images) > 0:
+                        self.log_test("Media Support - Tarot Images", True, f"{len(cards_with_images)}/{len(tarot_data)} tarot cards have image fields")
+                    else:
+                        self.log_test("Media Support - Tarot Images", False, "No tarot cards have image fields")
+                        return False
+                else:
+                    self.log_test("Media Support - Tarot Images", False, "No tarot data available")
+                    return False
+            else:
+                self.log_test("Media Support - Tarot Images", False, f"Cannot load tarot data: HTTP {tarot_response.status_code}")
+                return False
+            
+            # Test rueda animals have image fields
+            rueda_response = self.session.get(f"{API_BASE}/content/rueda")
+            if rueda_response.status_code == 200:
+                rueda_data = rueda_response.json()
+                if isinstance(rueda_data, list) and len(rueda_data) > 0:
+                    # Check if animals have image field
+                    animals_with_images = [animal for animal in rueda_data if 'image' in animal]
+                    if len(animals_with_images) > 0:
+                        self.log_test("Media Support - Rueda Images", True, f"{len(animals_with_images)}/{len(rueda_data)} rueda animals have image fields")
+                    else:
+                        self.log_test("Media Support - Rueda Images", False, "No rueda animals have image fields")
+                        return False
+                else:
+                    self.log_test("Media Support - Rueda Images", False, "No rueda data available")
+                    return False
+            else:
+                self.log_test("Media Support - Rueda Images", False, f"Cannot load rueda data: HTTP {rueda_response.status_code}")
+                return False
+            
+            # Test meditation content has image and audio fields
+            meditation_response = self.session.get(f"{API_BASE}/content/meditaciones")
+            if meditation_response.status_code == 200:
+                meditation_data = meditation_response.json()
+                if isinstance(meditation_data, list) and len(meditation_data) > 0:
+                    # Check if meditations have image and audio fields
+                    meditations_with_images = [med for med in meditation_data if 'image' in med]
+                    meditations_with_audio = [med for med in meditation_data if 'audio_url' in med]
+                    
+                    if len(meditations_with_images) > 0:
+                        self.log_test("Media Support - Meditation Images", True, f"{len(meditations_with_images)}/{len(meditation_data)} meditations have image fields")
+                    else:
+                        self.log_test("Media Support - Meditation Images", False, "No meditations have image fields")
+                        return False
+                    
+                    if len(meditations_with_audio) > 0:
+                        self.log_test("Media Support - Meditation Audio", True, f"{len(meditations_with_audio)}/{len(meditation_data)} meditations have audio fields")
+                    else:
+                        self.log_test("Media Support - Meditation Audio", False, "No meditations have audio fields")
+                        return False
+                else:
+                    self.log_test("Media Support - Meditation Content", False, "No meditation data available")
+                    return False
+            else:
+                self.log_test("Media Support - Meditation Content", False, f"Cannot load meditation data: HTTP {meditation_response.status_code}")
+                return False
+            
+            return True
+            
+        except Exception as e:
+            self.log_test("Media Support", False, f"Error: {str(e)}")
+            return False
+    
     def test_reading_generation(self, order_id=None):
-        """Test reading generation for different oracle types"""
+        """Test reading generation for different oracle types with image support"""
         if not order_id:
             # Create a test order first
             order_id = self.test_checkout_flow()
@@ -226,10 +366,13 @@ class PleyazulBackendTester:
                     if 'type' in result_json and 'timestamp' in result_json:
                         oracle_type = result_json['type']
                         
-                        # Validate specific oracle types
+                        # Validate specific oracle types with image support
                         if oracle_type == 'tarot':
                             if 'cards' in result_json and len(result_json['cards']) > 0:
-                                self.log_test("Reading Generation", True, f"Tarot reading generated with {len(result_json['cards'])} cards")
+                                cards = result_json['cards']
+                                # Check if cards include image information
+                                cards_with_images = [card for card in cards if 'image' in card]
+                                self.log_test("Reading Generation", True, f"Tarot reading generated with {len(cards)} cards, {len(cards_with_images)} with images")
                             else:
                                 self.log_test("Reading Generation", False, "Tarot reading missing cards")
                                 return False
@@ -241,7 +384,10 @@ class PleyazulBackendTester:
                                 return False
                         elif oracle_type == 'rueda':
                             if 'animals' in result_json and len(result_json['animals']) > 0:
-                                self.log_test("Reading Generation", True, f"Rueda reading generated with {len(result_json['animals'])} animals")
+                                animals = result_json['animals']
+                                # Check if animals include image information
+                                animals_with_images = [animal for animal in animals if 'image' in animal]
+                                self.log_test("Reading Generation", True, f"Rueda reading generated with {len(animals)} animals, {len(animals_with_images)} with images")
                             else:
                                 self.log_test("Reading Generation", False, "Rueda reading missing animals")
                                 return False
