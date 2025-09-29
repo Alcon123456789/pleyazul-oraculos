@@ -7,7 +7,8 @@
     "medicina": "Enseña el sagrado equilibrio entre dar y recibir. Honra los recursos de la Madre Tierra.",
     "afirmacion": "Agradezco la abundancia que me rodea y comparto mis bendiciones con generosidad.",
     "elemento": "Tierra",
-    "direccion": "Norte"
+    "direccion": "Norte",
+    "image": "/img/rueda/placeholder-animal.svg"
   },
   {
     "animal": "Águila",
