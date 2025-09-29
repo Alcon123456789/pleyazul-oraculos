@@ -1,0 +1,20 @@
+[
+  {
+    "name": "El Loco",
+    "upright": "Nuevos comienzos, espontaneidad, inocencia, espíritu libre, originalidad",
+    "reversed": "Imprudencia, impulsividad, falta de dirección, caos, comportamiento irresponsable",
+    "love": {
+      "upright": "Nueva relación llena de aventuras, amor espontáneo, romance inesperado",
+      "reversed": "Relación inestable, falta de compromiso, decisiones amorosas impulsivas"
+    },
+    "work": {
+      "upright": "Nuevo proyecto creativo, cambio de carrera, innovación en el trabajo",
+      "reversed": "Falta de planificación laboral, decisiones profesionales arriesgadas"
+    },
+    "health": {
+      "upright": "Energía renovada, nuevo enfoque hacia la salud, vitalidad",
+      "reversed": "Descuido de la salud, comportamientos de riesgo, falta de precaución"
+    },
+    "advice": "Confía en tu intuición y atrévete a dar ese primer paso. El universo conspira a tu favor."
+  }
+]

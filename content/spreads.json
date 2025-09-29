@@ -1,0 +1,26 @@
+{
+  "tarot_3_ppf": {
+    "oraculo": "tarot",
+    "cartas": 3,
+    "posiciones": ["Pasado", "Presente", "Futuro"]
+  },
+  "tarot_5_claridad": {
+    "oraculo": "tarot",
+    "cartas": 5,
+    "posiciones": ["Situación", "Bloqueo", "Recursos", "Consejo", "Resultado"]
+  },
+  "iching_1": {
+    "oraculo": "iching",
+    "cartas": 1
+  },
+  "rueda_3": {
+    "oraculo": "rueda",
+    "cartas": 3,
+    "posiciones": ["Fuerza", "Reto", "Camino"]
+  },
+  "rueda_astral": {
+    "oraculo": "rueda",
+    "cartas": 5,
+    "posiciones": ["Norte", "Sur", "Este", "Oeste", "Centro"]
+  }
+}

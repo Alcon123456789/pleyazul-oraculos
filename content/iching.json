@@ -1,0 +1,18 @@
+[
+  {
+    "hex": 1,
+    "nombre": "El Creador",
+    "palabras_clave": ["creatividad", "liderazgo", "fuerza", "iniciativa", "yang puro"],
+    "juicio": "El Creador obra sublime éxito, propiciando por la perseverancia.",
+    "imagen": "El movimiento del cielo es vigoroso. Así el hombre noble se fortalece sin descanso.",
+    "consejo": "Es momento de actuar con determinación y liderazgo. Tu energía creativa está en su punto máximo.",
+    "lineas": {
+      "1": "Dragón oculto. No actuar.",
+      "2": "Dragón que aparece en el campo. Conviene ver al gran hombre.",
+      "3": "El hombre noble trabaja con ahínco durante todo el día.",
+      "4": "Salto vacilante sobre el abismo. Sin culpa.",
+      "5": "Dragón volante en el cielo. Conviene ver al gran hombre.",
+      "6": "Dragón altivo tendrá motivo de arrepentimiento."
+    }
+  }
+]
