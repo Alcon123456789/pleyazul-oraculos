@@ -16,5 +16,77 @@
       "reversed": "Descuido de la salud, comportamientos de riesgo, falta de precaución"
     },
     "advice": "Confía en tu intuición y atrévete a dar ese primer paso. El universo conspira a tu favor."
+  },
+  {
+    "name": "El Mago",
+    "upright": "Manifestación, recursos disponibles, poder personal, concentración, acción",
+    "reversed": "Manipulación, talentos desperdiciados, falta de energía, comunicación deficiente",
+    "love": {
+      "upright": "Atracción magnética, capacidad de conquistar, relación intensa",
+      "reversed": "Manipulación emocional, promesas vacías, deshonestidad"
+    },
+    "work": {
+      "upright": "Habilidades excepcionales, liderazgo, éxito profesional",
+      "reversed": "Abuso de poder, falta de concentración, proyectos sin terminar"
+    },
+    "health": {
+      "upright": "Buena coordinación, capacidad de sanación, energía vital",
+      "reversed": "Desorden nervioso, agotamiento, falta de concentración"
+    },
+    "advice": "Tienes todo lo que necesitas para triunfar. Canaliza tu energía hacia tus objetivos."
+  },
+  {
+    "name": "La Sacerdotisa",
+    "upright": "Intuición, subconsciente, sabiduría interior, misterio, conocimiento oculto",
+    "reversed": "Secretos, información oculta, desconexión interior, falta de centro",
+    "love": {
+      "upright": "Amor platónico, conexión espiritual profunda, misterio romántico",
+      "reversed": "Secretos en la relación, falta de comunicación, represión emocional"
+    },
+    "work": {
+      "upright": "Trabajo en educación o sanación, investigación, conocimiento especializado",
+      "reversed": "Información oculta, falta de acceso a recursos, bloqueo creativo"
+    },
+    "health": {
+      "upright": "Equilibrio hormonal, salud femenina, métodos de sanación natural",
+      "reversed": "Desequilibrios hormonales, problemas ginecológicos, estrés"
+    },
+    "advice": "Escucha tu voz interior. Las respuestas que buscas están dentro de ti."
+  },
+  {
+    "name": "La Emperatriz",
+    "upright": "Feminidad, belleza, naturaleza, abundancia, maternidad, creatividad",
+    "reversed": "Dependencia creativa, vanidad, infertilidad, falta de confianza",
+    "love": {
+      "upright": "Fertilidad, embarazo, amor maternal, relación nutritiva",
+      "reversed": "Problemas de fertilidad, sobreprotección, dependencia emocional"
+    },
+    "work": {
+      "upright": "Creatividad floreciente, abundancia, trabajo artístico exitoso",
+      "reversed": "Bloqueo creativo, falta de recursos, proyectos sin frutos"
+    },
+    "health": {
+      "upright": "Embarazo, salud reproductiva, vitalidad, conexión con la naturaleza",
+      "reversed": "Problemas reproductivos, desequilibrio hormonal, desconexión natural"
+    },
+    "advice": "Cultiva tu creatividad y permite que florezca naturalmente. La abundancia te espera."
+  },
+  {
+    "name": "El Emperador",
+    "upright": "Autoridad, estructura, control, poder paternal, liderazgo, estabilidad",
+    "reversed": "Tiranía, rigidez excesiva, falta de disciplina, abuso de poder",
+    "love": {
+      "upright": "Protección, estabilidad, compromiso a largo plazo, figura paterna",
+      "reversed": "Dominación, control excesivo, rigidez en la relación"
+    },
+    "work": {
+      "upright": "Liderazgo, autoridad, estructura organizacional, disciplina",
+      "reversed": "Autoritarismo, falta de flexibilidad, abuso de poder laboral"
+    },
+    "health": {
+      "upright": "Disciplina en la salud, estructura en los hábitos, fortaleza",
+      "reversed": "Rigidez física, problemas de autoridad, estrés por control"
+    },
+    "advice": "Establece orden y disciplina en tu vida, pero mantén la flexibilidad para adaptarte."
   }
 ]
