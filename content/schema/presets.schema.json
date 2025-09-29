@@ -1,0 +1,11 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["label", "tirada_id"],
+    "properties": {
+      "label": {"type": "string"},
+      "tirada_id": {"type": "string"}
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "required": ["oraculo", "cartas"],
+    "properties": {
+      "oraculo": {"type": "string", "enum": ["tarot", "iching", "rueda"]},
+      "cartas": {"type": "integer", "minimum": 1},
+      "posiciones": {"type": "array", "items": {"type": "string"}}
+    }
+  }
+}

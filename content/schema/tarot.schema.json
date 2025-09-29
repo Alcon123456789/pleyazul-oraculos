@@ -1,0 +1,37 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["name", "upright", "reversed", "love", "work", "health", "advice"],
+    "properties": {
+      "name": {"type": "string"},
+      "upright": {"type": "string"},
+      "reversed": {"type": "string"},
+      "love": {
+        "type": "object",
+        "required": ["upright", "reversed"],
+        "properties": {
+          "upright": {"type": "string"},
+          "reversed": {"type": "string"}
+        }
+      },
+      "work": {
+        "type": "object",
+        "required": ["upright", "reversed"],
+        "properties": {
+          "upright": {"type": "string"},
+          "reversed": {"type": "string"}
+        }
+      },
+      "health": {
+        "type": "object",
+        "required": ["upright", "reversed"],
+        "properties": {
+          "upright": {"type": "string"},
+          "reversed": {"type": "string"}
+        }
+      },
+      "advice": {"type": "string"}
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["animal", "arquetipo", "luz", "sombra", "medicina", "afirmacion"],
+    "properties": {
+      "animal": {"type": "string"},
+      "arquetipo": {"type": "string"},
+      "luz": {"type": "string"},
+      "sombra": {"type": "string"},
+      "medicina": {"type": "string"},
+      "afirmacion": {"type": "string"},
+      "elemento": {"type": "string"},
+      "direccion": {"type": "string"}
+    }
+  }
+}
