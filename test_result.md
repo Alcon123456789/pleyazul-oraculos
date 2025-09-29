@@ -101,3 +101,112 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: "Test the complete Pleyazul Oráculos PWA backend system including API status, content loading, checkout flow, reading generation, database operations, error handling, and admin endpoints."
+
+backend:
+  - task: "API Status and Health Check"
+    implemented: true
+    working: true
+    file: "app/api/[[...path]]/route.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: "API status endpoint working correctly. Returns proper JSON with service info, timestamp, and integration status. Test mode is correctly enabled."
+
+  - task: "Content Loading Endpoints"
+    implemented: true
+    working: false
+    file: "app/api/[[...path]]/route.js"
+    stuck_count: 1
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: false
+          agent: "testing"
+          comment: "CRITICAL ISSUE: Content files contain insufficient data. tarot.json has only 1 card, iching.json has only 1 hexagram, rueda.json has only 1 animal. Spreads require 3-5 cards but cannot draw unique cards from single-item arrays. This will cause reading generation to fail."
+
+  - task: "Order Creation and Checkout Flow"
+    implemented: true
+    working: true
+    file: "app/api/[[...path]]/route.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: "Checkout endpoint working correctly. Successfully creates orders with proper validation. Test mode integration working. PayPal mock functionality implemented correctly."
+
+  - task: "Reading Generation"
+    implemented: true
+    working: false
+    file: "app/api/[[...path]]/route.js"
+    stuck_count: 1
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: false
+          agent: "testing"
+          comment: "CRITICAL ISSUE: Reading generation fails due to insufficient content data. The generateReading function in contentService.js tries to draw multiple unique cards but content files only have 1 item each. This causes infinite loops or timeouts."
+
+  - task: "Database Operations"
+    implemented: true
+    working: "NA"
+    file: "lib/mongodb.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "testing"
+          comment: "Database connection established and MongoDB running. Orders endpoint exists but experiencing timeout issues due to system performance. Unable to fully test due to reading generation blocking."
+
+  - task: "Error Handling"
+    implemented: true
+    working: true
+    file: "app/api/[[...path]]/route.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: "Error handling implemented correctly. Invalid spread IDs are properly rejected with 400 status. Missing required fields validation working."
+
+  - task: "Admin Endpoints"
+    implemented: true
+    working: "NA"
+    file: "app/api/[[...path]]/route.js"
+    stuck_count: 0
+    priority: "low"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "testing"
+          comment: "Admin setup-status endpoint implemented but experiencing timeout issues due to system performance problems."
+
+frontend:
+
+metadata:
+  created_by: "testing_agent"
+  version: "1.0"
+  test_sequence: 1
+  run_ui: false
+
+test_plan:
+  current_focus:
+    - "Content Loading Endpoints"
+    - "Reading Generation"
+  stuck_tasks:
+    - "Content Loading Endpoints"
+    - "Reading Generation"
+  test_all: false
+  test_priority: "high_first"
+
+agent_communication:
+    - agent: "testing"
+      message: "Backend testing completed. CRITICAL ISSUE FOUND: Content files are severely under-populated. Each oracle type (tarot, iching, rueda) has only 1 item but spreads require 3-5 unique items. This breaks the core reading generation functionality. System also experiencing high CPU usage causing timeouts on some endpoints."
