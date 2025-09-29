@@ -9,7 +9,8 @@
       "descripcion": {"type": "string"},
       "duracion": {"type": "string"},
       "texto": {"type": "string"},
-      "audio_url": {"type": "string"}
+      "audio_url": {"type": "string"},
+      "image": {"type": "string"}
     }
   }
 }
