@@ -1,0 +1,138 @@
+[
+  {
+    "test": "API Status",
+    "success": false,
+    "message": "HTTP 502",
+    "timestamp": "2025-09-29T11:49:30.299782",
+    "details": ""
+  },
+  {
+    "test": "Content tarot",
+    "success": false,
+    "message": "HTTP 502",
+    "timestamp": "2025-09-29T11:49:30.372217",
+    "details": ""
+  },
+  {
+    "test": "Content iching",
+    "success": false,
+    "message": "HTTP 502",
+    "timestamp": "2025-09-29T11:49:30.377840",
+    "details": ""
+  },
+  {
+    "test": "Content rueda",
+    "success": true,
+    "message": "Content loaded successfully",
+    "timestamp": "2025-09-29T11:49:46.727130",
+    "details": null
+  },
+  {
+    "test": "Content spreads",
+    "success": true,
+    "message": "Loaded 5 spreads",
+    "timestamp": "2025-09-29T11:49:53.782492",
+    "details": null
+  },
+  {
+    "test": "Content presets",
+    "success": true,
+    "message": "Content loaded successfully",
+    "timestamp": "2025-09-29T11:49:53.802981",
+    "details": null
+  },
+  {
+    "test": "Content meditaciones",
+    "success": true,
+    "message": "Content loaded successfully",
+    "timestamp": "2025-09-29T11:49:53.817174",
+    "details": null
+  },
+  {
+    "test": "Checkout Flow",
+    "success": true,
+    "message": "PayPal order created: d764b71d-7331-4b32-b0e6-23353dd21ea6",
+    "timestamp": "2025-09-29T11:49:54.691063",
+    "details": {
+      "success": true,
+      "order_id": "d764b71d-7331-4b32-b0e6-23353dd21ea6",
+      "paypal_order": {
+        "id": "MOCK_ORDER_1759146594686",
+        "status": "CREATED",
+        "links": [
+          {
+            "href": "/api/paypal/mock-approve",
+            "rel": "approve",
+            "method": "GET"
+          }
+        ]
+      },
+      "approval_url": "/api/paypal/mock-approve"
+    }
+  },
+  {
+    "test": "Reading Generation",
+    "success": true,
+    "message": "Tarot reading generated with 3 cards",
+    "timestamp": "2025-09-29T11:49:54.778131",
+    "details": null
+  },
+  {
+    "test": "Database Orders",
+    "success": true,
+    "message": "Retrieved 3 orders from database",
+    "timestamp": "2025-09-29T11:49:54.791912",
+    "details": null
+  },
+  {
+    "test": "Database Single Order",
+    "success": true,
+    "message": "Retrieved specific order: d764b71d-7331-4b32-b0e6-23353dd21ea6",
+    "timestamp": "2025-09-29T11:49:54.804916",
+    "details": null
+  },
+  {
+    "test": "Database Reading",
+    "success": true,
+    "message": "Reading found in database",
+    "timestamp": "2025-09-29T11:49:54.804940",
+    "details": null
+  },
+  {
+    "test": "Error Handling - Invalid Spread",
+    "success": true,
+    "message": "Correctly rejected invalid spread ID",
+    "timestamp": "2025-09-29T11:49:54.982592",
+    "details": null
+  },
+  {
+    "test": "Error Handling - Missing Fields",
+    "success": true,
+    "message": "Correctly rejected incomplete order",
+    "timestamp": "2025-09-29T11:49:54.993443",
+    "details": null
+  },
+  {
+    "test": "Error Handling - Non-existent Order",
+    "success": true,
+    "message": "Correctly returned 404 for non-existent order",
+    "timestamp": "2025-09-29T11:49:55.006731",
+    "details": null
+  },
+  {
+    "test": "Admin Setup Status",
+    "success": true,
+    "message": "Admin setup status retrieved successfully",
+    "timestamp": "2025-09-29T11:49:55.018962",
+    "details": {
+      "paypal_configured": false,
+      "telegram_configured": false,
+      "test_mode": true,
+      "admin_password_set": true,
+      "webhooks": {
+        "paypal_url": "https://divine-insight-1.preview.emergentagent.com/api/webhooks/paypal",
+        "telegram_url": "https://divine-insight-1.preview.emergentagent.com/api/webhooks/telegram"
+      }
+    }
+  }
+]
