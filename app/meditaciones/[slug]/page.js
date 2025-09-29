@@ -85,6 +85,16 @@ export default function MeditacionDetailPage({ params }) {
       {/* Main Content */}
       <Card className="bg-gradient-to-br from-green-50 to-emerald-50 border-emerald-200">
         <CardHeader className="text-center pb-6">
+          {meditacion.image && (
+            <div className="mb-6">
+              <img 
+                src={meditacion.image} 
+                alt={meditacion.titulo}
+                className="w-full max-w-md mx-auto h-48 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+          )}
+          
           <div className="mx-auto p-4 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full text-white mb-4 w-fit">
             <Heart className="w-8 h-8" />
           </div>
