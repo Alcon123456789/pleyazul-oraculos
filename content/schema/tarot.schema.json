@@ -31,7 +31,8 @@
           "reversed": {"type": "string"}
         }
       },
-      "advice": {"type": "string"}
+      "advice": {"type": "string"},
+      "image": {"type": "string"}
     }
   }
 }
