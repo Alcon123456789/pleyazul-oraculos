@@ -153,6 +153,15 @@ export default function LecturaPage({ params }) {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
+                    {card.image && (
+                      <div className="flex justify-center mb-4">
+                        <img 
+                          src={card.image} 
+                          alt={card.name}
+                          className={`w-24 h-40 object-cover rounded-lg shadow-md ${card.reversed ? 'transform rotate-180' : ''}`}
+                        />
+                      </div>
+                    )}
                     <div>
                       <h4 className="font-medium text-slate-800">Significado:</h4>
                       <p className="text-slate-600">{card.interpretation}</p>
