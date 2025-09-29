@@ -9,12 +9,13 @@ export const metadata = {
   description: 'Consulta los oráculos ancestrales: Tarot, I Ching y Rueda Medicinal. Encuentra guía espiritual y claridad en tu camino.',
   keywords: 'tarot, i ching, rueda medicinal, oráculos, lectura espiritual, adivinación',
   manifest: '/manifest.json',
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
   themeColor: '#8B4513',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-  },
 };
 
 export default function RootLayout({ children }) {
