@@ -208,11 +208,9 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Content Loading Endpoints"
+    - "Order Creation and Checkout Flow"
     - "Reading Generation"
-  stuck_tasks:
-    - "Content Loading Endpoints"
-    - "Reading Generation"
+  stuck_tasks: []
   test_all: false
   test_priority: "high_first"
 
