@@ -5,9 +5,18 @@ const nextConfig = {
   },
   experimental: {
     // Remove if not using Server Components
-    serverComponentsExternalPackages: ['mongodb'],
+    serverComponentsExternalPackages: ['mongodb', 'node-telegram-bot-api'],
   },
-  webpack(config, { dev }) {
+  webpack(config, { dev, isServer }) {
+    // Handle node-telegram-bot-api and its dependencies
+    if (isServer) {
+      config.externals = config.externals || [];
+      config.externals.push({
+        'node-telegram-bot-api': 'commonjs node-telegram-bot-api',
+        'supports-color': 'commonjs supports-color',
+      });
+    }
+    
     if (dev) {
       // Reduce CPU/memory from file watching
       config.watchOptions = {
