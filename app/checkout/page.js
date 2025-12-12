@@ -13,6 +13,9 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { toast } from 'sonner';
 
+// Force dynamic rendering to avoid prerendering issues with useSearchParams
+export const dynamic = 'force-dynamic';
+
 export default function CheckoutPage() {
   const [spreads, setSpreads] = useState({});
   const [selectedSpread, setSelectedSpread] = useState('');
