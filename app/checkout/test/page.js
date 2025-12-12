@@ -1,16 +1,14 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle, Clock, CreditCard } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { toast } from 'sonner';
 
-// Force dynamic rendering to avoid prerendering issues with useSearchParams
-export const dynamic = 'force-dynamic';
-
-export default function TestCheckoutPage() {
+// Component that uses useSearchParams wrapped in Suspense
+function TestCheckoutContent() {
   const [processing, setProcessing] = useState(false);
   const [orderId, setOrderId] = useState('');
   const router = useRouter();
