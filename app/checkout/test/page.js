@@ -133,3 +133,21 @@ function TestCheckoutContent() {
     </div>
   );
 }
+
+// Main page component with Suspense boundary
+export default function TestCheckoutPage() {
+  return (
+    <Suspense fallback={
+      <div className="max-w-md mx-auto">
+        <div className="flex justify-center items-center min-h-96">
+          <div className="text-center">
+            <Clock className="w-8 h-8 mx-auto mb-4 text-slate-400 animate-spin" />
+            <p className="text-slate-600">Cargando...</p>
+          </div>
+        </div>
+      </div>
+    }>
+      <TestCheckoutContent />
+    </Suspense>
+  );
+}
