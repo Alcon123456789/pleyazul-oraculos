@@ -7,6 +7,9 @@ import { CheckCircle, Clock, CreditCard } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { toast } from 'sonner';
 
+// Force dynamic rendering to avoid prerendering issues with useSearchParams
+export const dynamic = 'force-dynamic';
+
 export default function TestCheckoutPage() {
   const [processing, setProcessing] = useState(false);
   const [orderId, setOrderId] = useState('');
