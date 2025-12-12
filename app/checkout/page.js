@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -13,10 +13,8 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { toast } from 'sonner';
 
-// Force dynamic rendering to avoid prerendering issues with useSearchParams
-export const dynamic = 'force-dynamic';
-
-export default function CheckoutPage() {
+// Component that uses useSearchParams wrapped in Suspense
+function CheckoutContent() {
   const [spreads, setSpreads] = useState({});
   const [selectedSpread, setSelectedSpread] = useState('');
   const [email, setEmail] = useState('');
